@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MyGroupingSuite]">
+  <test thread-count="5" name="MyGroupingTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testcases.WorkersTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyWorkersPage" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.WorkersTest -->
+    </classes>
+  </test> <!-- MyGroupingTest(failed) -->
+</suite> <!-- Failed suite [MyGroupingSuite] -->
